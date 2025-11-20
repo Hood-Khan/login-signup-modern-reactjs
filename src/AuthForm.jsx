@@ -31,6 +31,7 @@ function AuthForm() {
         {isLogin ? (
           <>
             <div>
+                <h2>Login Form</h2>
               <form className="space-y-4">
               <input
                 type="email"
@@ -54,7 +55,40 @@ function AuthForm() {
             </div>
           </>
         ) : (
-          ""
+          <>
+            <div>
+                <h2>SignUp Form</h2>
+                <form action="">
+                     <input
+                type="name"
+                placeholder="Please enter full name"
+                className="w-full px-4 py-2 rounded-lg bg-gray-700 text-white border border-gray-600 focus:outline-none focus:border-blue-500"
+              />
+                     <input
+                type="email"
+                placeholder="Email"
+                className="w-full px-4 py-2 rounded-lg bg-gray-700 text-white border border-gray-600 focus:outline-none focus:border-blue-500"
+              />
+              <input
+                type="password"
+                placeholder="Please enter password"
+                className="w-full px-4 py-2 rounded-lg bg-gray-700 text-white border border-gray-600 focus:outline-none focus:border-blue-500"
+              />
+              <input
+                type="password"
+                placeholder="Confirmed password"
+                className="w-full px-4 py-2 rounded-lg bg-gray-700 text-white border border-gray-600 focus:outline-none focus:border-blue-500"
+              />
+              <button
+                type="submit"
+                className="w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 transition-colors"
+              >
+                SignUp
+              </button>
+                </form>
+                <p>Already Have an Account! <a href="#" onClick={()=>setIsLogin(true)}>Login</a></p>
+            </div>
+          </>
         )}
       </div>
     </div>
